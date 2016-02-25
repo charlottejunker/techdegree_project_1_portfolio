@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   color: #222;
   background: #f7f5f0;
 }
@@ -18,10 +18,11 @@ a {
   color: #999;
 }
 a:hover {
-  color: #6633ff;
+  color: #5ad8f4;
 }
 
 /* Section Styles */
+
 
 .main-nav {
   width: 100%;
@@ -57,7 +58,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/london.jpg') no-repeat top center ;
+  background: url('../img/london.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -70,11 +71,11 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 2px solid white;
+  transition: all 1s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotateY(360deg);
 }
 .tag {
   background-color: #efefef;
@@ -86,12 +87,12 @@ header .profile-image:hover {
 }
 .location {
   background-color: #222;
-  color: yellow;
+  color: #fff;
 }
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
-  max-width: 500px;
+  max-width: 90%;
   text-align: left;
   background: #fff;
   border-bottom: 4px solid #ccc;
@@ -99,6 +100,20 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
+  border-color: #ff99ff;
+}
+
+.card2 {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 90%;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+.card2:hover {
   border-color: #ff99ff;
 }
 
@@ -124,6 +139,7 @@ footer {
   width: 100%;
   min-height: 30px;
   padding: 20px 0 40px 20px;
+  clear: both;
 }
 
 footer .copyright {
@@ -152,19 +168,76 @@ a.social {
   transition: all .5s;
 }
 a.twitter {
-  background-image: url(images/twitter.svg);
+  background-image: url('../img/twitter.svg');
 }
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
+
 a.github {
-  background-image: url(images/github.svg);
+  background-image: url('../img/github.svg');
 }
 a.social:hover {
   opacity: 1;
 }
 .clearfix {
   clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Projects page */
+
+#gallery {
+  margin: 0;
+  padding: 0;
+
+}
+#gallery li {
+  list-style: none;
+  float: left;
+  width: 90%;
+  margin: 5%;
+  background-color: #f7f5f0;
+  font-size: 0.9em;
+}
+
+#gallery li p {
+  margin: 0;
+  padding: 5%;
+}
+
+.flex2 {
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+/* Contact page */
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+.contact-info a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+}
+
+.contact-info li.mail a {
+  background-image: url('../img/mail.png');
+}
+
+.contact-info li.github a {
+  background-image: url('../img/github.png');
 }
 
 /* Styles for larger screens */
@@ -179,6 +252,10 @@ a.social:hover {
       margin: 0 auto;
   }
 
+  .card {
+    max-width: 500px;
+  }
+
   header {
     min-height: 470px;
   }
@@ -186,6 +263,7 @@ a.social:hover {
   .nav {
     max-width: 1200px;
     padding: 0 30px;
+    font-size: 1.2em;
   }
 
 
