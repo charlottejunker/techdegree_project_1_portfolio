@@ -35,6 +35,7 @@ a:hover {
 .nav {
   display: flex;
   justify-content: space-around;
+  font-size: 0.9em;
   font-weight: 700;
   list-style-type: none;
   margin: 0 auto;
@@ -62,6 +63,7 @@ header {
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
+  font-size: 0.9em;
 }
 header {
   line-height: 1.5;
@@ -89,21 +91,8 @@ header .profile-image:hover {
   background-color: #222;
   color: #fff;
 }
-.card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 90%;
-  text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
-  transition: all .5s;
-}
-.card:hover {
-  border-color: #ff99ff;
-}
 
-.card2 {
+.card, .card2 {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 90%;
@@ -113,7 +102,7 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
-.card2:hover {
+.card:hover, .card2:hover {
   border-color: #ff99ff;
 }
 
@@ -181,17 +170,19 @@ a.social:hover {
   clear: both;
 }
 
-img {
-  max-width: 100%;
-}
 
 /* Projects page */
 
 #gallery {
+  width: 100%;
   margin: 0;
   padding: 0;
-
 }
+
+#gallery img {
+  max-width: 100%;
+}
+
 #gallery li {
   list-style: none;
   float: left;
@@ -240,6 +231,7 @@ img {
   background-image: url('../img/github.png');
 }
 
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
 
@@ -253,11 +245,12 @@ img {
   }
 
   .card {
-    max-width: 500px;
+    width: 50%;
   }
 
   header {
     min-height: 470px;
+    font-size: 1em;
   }
 
   .nav {
@@ -279,6 +272,17 @@ img {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
+  }
+
+/* page: projects*/
+
+  #gallery li {
+    margin: 2.5%;
+    width: 28.3333%;
+  }
+
+  #gallery li:nth-child(4n) {
+    clear: left;
   }
 
 }
